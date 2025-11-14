@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class TeamService implements TeamServiceImpl {
-
     private final TeamRepository teamRepository;
 
     @Override
@@ -41,7 +40,6 @@ public class TeamService implements TeamServiceImpl {
     private Team createTeamEntity(TeamDto dto) {
         return TeamFactory.create(dto.getName());
     }
-
     private Team saveTeam(Team team) {
         return teamRepository.save(team);
     }

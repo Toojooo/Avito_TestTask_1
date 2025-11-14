@@ -18,7 +18,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Slf4j
 public class UserService implements UserServiceImpl {
-
     private final UserRepository userRepository;
     private final TeamRepository teamRepository;
 

@@ -16,7 +16,6 @@ public class PrFactory {
         pr.setReviewers(new HashSet<>());
         return pr;
     }
-
     public static Pr createWithReviewers(String title, User author, Set<User> reviewers) {
         Pr pr = create(title, author);
         pr.setReviewers(reviewers);

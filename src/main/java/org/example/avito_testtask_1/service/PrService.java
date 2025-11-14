@@ -13,6 +13,7 @@ import org.example.avito_testtask_1.repository.UserRepository;
 import org.example.avito_testtask_1.factory.PrFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
@@ -119,8 +120,9 @@ public class PrService implements PrServiceImpl {
     }
 
     private Set<User> pickReviewers(List<User> candidates) {
-        Collections.shuffle(candidates);
-        return candidates.stream().limit(2).collect(Collectors.toSet());
+        List<User> mutable = new ArrayList<>(candidates);
+        Collections.shuffle(mutable);
+        return mutable.stream().limit(2).collect(Collectors.toSet());
     }
 
     private User pickOneRandom(List<User> candidates) {

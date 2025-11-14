@@ -8,7 +8,6 @@ import java.util.UUID;
 
 @Data
 public class AssignmentStatsDto {
-
     @Schema(description = "Количество назначений по каждому пользователю (userId -> count)")
     private Map<UUID, Long> assignmentsByUser;
 

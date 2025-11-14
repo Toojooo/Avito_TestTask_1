@@ -13,10 +13,8 @@ public class UserFactory {
         if (team != null) {
             team.getUsers().add(user);
         }
-
         return user;
     }
-
     public static User createInactive(String name, Team team) {
         User user = create(name, team);
         user.setActive(false);

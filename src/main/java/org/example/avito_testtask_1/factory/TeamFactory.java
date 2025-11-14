@@ -13,7 +13,6 @@ public class TeamFactory {
         team.setUsers(new ArrayList<>());
         return team;
     }
-
     public static Team createWithUsers(String name, List<User> users) {
         Team team = create(name);
         team.setUsers(users);
